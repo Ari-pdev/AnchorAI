@@ -27,25 +27,37 @@ const addBotMessage = (content) => {
 
   newMessage.innerHTML = content + `<sub> ${currentTime}</sub> `;
   ChatWindowElement.appendChild(newMessage);
-  unlockInput();
 };
 
 const addUserMessage = () => {
   const content = input.value.trim();
   input.value = "";
 
-  if (content !== "") {
-    lockInput();
-    const newMessage = document.createElement("div");
-    newMessage.className = "Message User";
+  if (content === "") return;
 
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, "0");
-    const minutes = String(now.getMinutes()).padStart(2, "0");
-    const currentTime = `${hours}:${minutes}`;
+  lockInput();
+  const newMessage = document.createElement("div");
+  newMessage.className = "Message User";
 
-    newMessage.innerHTML = content + `<sub> ${currentTime}</sub> `;
-    ChatWindowElement.appendChild(newMessage);
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const currentTime = `${hours}:${minutes}`;
+
+  newMessage.innerHTML = content + `<sub> ${currentTime}</sub> `;
+  ChatWindowElement.appendChild(newMessage);
+  try {
+    pywebview.api.get_bot_response(content).then(
+      (response) => {
+        addBotMessage(response);
+        unlockInput();
+      },
+    );
+  } catch (error) {
+    addBotMessage(
+      "Something went wrong, most likely a network error. Please try later!",
+    );
+    pywebview.api.log(error);
   }
 };
 
