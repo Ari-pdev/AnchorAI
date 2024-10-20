@@ -1,0 +1,75 @@
+/* ROBOTO MONO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+/* Titillum Web */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+:root {
+  /*
+    [ BODY COLORS ]
+    - base is for the background
+    - mantle is for extruding top level elements
+    - crust is for the hover
+  */
+  --color-primary-base: #303446;
+  --color-primary-mantle: #292c3c;
+  --color-primary-crust: #232634;
+
+  /*
+    [ TEXT COLORS ]
+  */
+  --color-text: #c6d0f5;
+  --color-sub-text: #737994;
+  --color-primary-bad: #e78284;
+  --color-secondary-bad: #ea999c;
+  --color-primary-good: #a6d189;
+  --color-secondary-good: #81c8be;
+
+  /*
+    [ ELEMENT COLORS / GRADIENTS ] 
+  */
+  --background-gradient-input: linear-gradient(90deg, rgba(140, 170, 238, 1) 0%, rgba(186, 187, 241, 1) 100%);
+  --background-gradient-input-active: background: linear-gradient(90deg, rgba(133, 193, 220, 1) 0%, rgba(140, 170, 238, 1) 100%);
+  --background-gradient-bad: linear-gradient(90deg, rgba(231, 130, 132, 1) 0%, rgba(234, 153, 156, 1) 100%);
+  --background-gradient-good: background: linear-gradient(90deg, rgba(166, 209, 137, 1) 0%, rgba(129, 200, 190, 1) 100%);
+  --background-awaiting-response-1: #737994;
+  --background-awaiting-response-2: #838ba7;
+  --background-awaiting-response-3: #949cbb;
+}
+
+* {
+  font-family: 'Titillum Web', sans-serif;
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+body {
+  margin: 0;
+}
+
+
+.TopBar {
+  background: var(--color-background);
+}
+
+.TopBarList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+
+}
+
+.Title {
+  margin-right: auto;
+}
+
+.TobBarList li {
+  display: inline;
+}
+
+.TopBarItem {
+  font-size: 2rem;
+  font-family: 'Roboto Mono', monospace;
+}
