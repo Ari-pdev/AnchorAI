@@ -185,6 +185,10 @@ main {
   margin-left: auto;
 }
 
+.User sub {
+  color: white;
+}
+
 .Bot {
   background: var(--background-gradient-message-bot);
   border-radius: 0.5rem;
