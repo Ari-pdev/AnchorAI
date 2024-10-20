@@ -40,7 +40,7 @@
   --background-gradient-input-active: linear-gradient(90deg, rgba(133, 193, 220, 1) 0%, rgba(140, 170, 238, 1) 100%);
   --background-gradient-bad: linear-gradient(90deg, rgba(231, 130, 132, 1) 0%, rgba(234, 153, 156, 1) 100%);
   --background-gradient-good: linear-gradient(90deg, rgba(166, 209, 137, 1) 0%, rgba(129, 200, 190, 1) 100%);
-  --background-awaiting-response-1: #737994;
+  --background-gradient-awaiting-response: linear-gradient(90deg, rgba(148, 156, 187, 1) 0%, rgba(131, 139, 167, 1) 50%, rgba(115, 121, 148, 1) 100%);
   --background-awaiting-response-2: #838ba7;
   --background-awaiting-response-3: #949cbb;
 
@@ -171,6 +171,7 @@ main {
 }
 
 .Message {
+  margin-top: 1rem;
   font-size: 1.25rem;
   padding: 1rem;
   padding-top: 0.5rem;
@@ -199,6 +200,12 @@ main {
   filter: brightness(0.8);
   color: white;
   margin-left: auto;
+}
+
+.Waiting {
+  font-size: 0.9rem;
+  font-family: 'nerd';
+  color: var(--background-gradient-awaiting-response);
 }
 
 .ChatInputSection {
