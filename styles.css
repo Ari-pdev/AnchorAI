@@ -35,6 +35,7 @@
   /*
     [ ELEMENT COLORS / GRADIENTS ] 
   */
+  --background-gradient-message-bot: radial-gradient(circle, rgba(39, 43, 65, 1) 100%, rgba(47, 54, 79, 1) 0%);
   --background-gradient-input: linear-gradient(90deg, rgba(140, 170, 238, 1) 0%, rgba(186, 187, 241, 1) 100%);
   --background-gradient-input-active: linear-gradient(90deg, rgba(133, 193, 220, 1) 0%, rgba(140, 170, 238, 1) 100%);
   --background-gradient-bad: linear-gradient(90deg, rgba(231, 130, 132, 1) 0%, rgba(234, 153, 156, 1) 100%);
@@ -164,6 +165,36 @@ main {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.Message {
+  font-size: 1.25rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: fit-content;
+  border-radius: 1rem;
+  max-width: 65%;
+}
+
+.Message sub {
+  font-size: 0.8rem;
+  margin-left: auto;
+}
+
+.Bot {
+  background: var(--background-gradient-message-bot);
+  border-radius: 0.5rem;
+}
+
+.User {
+  background: var(--background-gradient-good);
+  filter: brightness(0.8);
+  color: white;
+  margin-left: auto;
 }
 
 .ChatInputSection {
@@ -221,6 +252,7 @@ main {
 .ChatInputSection input::placeholder {
   color: inherit;
 }
+
 
 
 @keyframes spin {
