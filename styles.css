@@ -253,7 +253,9 @@ main {
   color: inherit;
 }
 
-
+.Disabled {
+  pointer-events: none;
+}
 
 @keyframes spin {
   from {
